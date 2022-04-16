@@ -1,5 +1,3 @@
-FROM tomcat 
-WORKDIR webapps 
-COPY target/WebApp.war .
-RUN rm -rf ROOT && mv WebApp.war ROOT.war
-ENTRYPOINT ["sh", "/usr/local/tomcat/bin/startup.sh"]
+FROM tomcat:8.0.20-jre8
+# Dummy text to test 
+COPY target/myweb*.war /usr/local/tomcat/webapps/myweb.war
